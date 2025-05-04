@@ -98,9 +98,15 @@ addBtn.addEventListener('click', (e)=>{
     progressValue.style.width = pValue + '%'
     console.log(goalContainerSec.lastElementChild.firstElementChild)
     goalContainerSec.lastElementChild.firstElementChild.addEventListener('click', (e)=>{
-    const allpass = [...inputFields].every(node =>{
-        return node.value != ''
-    })
+        const allpass = [...inputFields].every(node =>{
+            return node.value != ''
+        })
+        const currentInputField =  copyNode.lastElementChild.id == 'fourth' && !goalContainerSec.firstElementChild.lastElementChild.value ? true : copyNode.lastElementChild.id == 'fifth' && !goalContainerSec.lastElementChild.lastElementChild.value ? true : false
+        if(allpass && currentInputField){
+            
+        }else{
+            errorLabel.parentElement.classList.add('show-error')
+        }
 
     })
 })
