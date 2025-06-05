@@ -1,0 +1,1 @@
+This project is all about DOM Manupulation with creating new element and dynamic progress bar.
